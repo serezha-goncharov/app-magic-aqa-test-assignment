@@ -10,6 +10,9 @@
       ],
       "@fixtures/*": [
         "fixtures/*"
+      ],
+      "@util/*": [
+        "util/*"
       ]
     }
   }
