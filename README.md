@@ -46,25 +46,17 @@ AppMagic - [link](https://docs.google.com/document/d/1DiJR6vnf8JyRHaB3pJ56YViKa6
 3. Project devices were taken from default Playwright config
 4. Repo branching was not applied, due to time saving.
 
----
-
 ## Test Object
 
 Country selector field and search functionalities.
-
----
 
 ## Types of Testing
 
 Automated testing of UI behaviour of the Country selector component
 
----
-
 ## Test Framework
 
 Playwright + JS
-
----
 
 ## Test cases
 
