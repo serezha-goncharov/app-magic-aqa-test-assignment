@@ -7,6 +7,8 @@ type Pages = {
 
 export const test = base.extend<Pages>({
   appsPage: async ({page}, use) => {
-    await use(new AppsPage(page));
+    const appsPage = new AppsPage(page);
+    await appsPage.goto();
+    await use(appsPage);
   }
 });
