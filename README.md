@@ -29,7 +29,7 @@ npm run test:debug
 show `html` report
 
 ```npm
-npm run test:report
+npm run report
 ```
 
 ## Description
