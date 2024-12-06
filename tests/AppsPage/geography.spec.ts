@@ -57,7 +57,7 @@ test.describe('Geography selector', () => {
 
   test('Check "Nothing to display" label', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
-    await appsPage.geography.selectorPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
     await appsPage.geography.fillSearchInput("Zimbabwe");
     await appsPage.geography.checkIsVisible(appsPage.geography.noDataLabel);
@@ -66,7 +66,7 @@ test.describe('Geography selector', () => {
 
   test('Check invalid input data', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
-    await appsPage.geography.selectorPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
     const testCases: Array<any> = [
       {
