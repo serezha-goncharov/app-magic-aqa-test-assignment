@@ -135,7 +135,7 @@ Playwright + JS
 | 8  | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
 | 9  | Input space `" "`                                                 | Country list is not changed and clear button is shown                |
 | 10 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 11 | Input Cyrillic symbols (ex.: `Беларусь`)                          | Country list is hidden and "Nothing to display" label is shown       |
+| 11 | Input Cyrillic symbols (ex.: `Россия`)                            | Country list is hidden and "Nothing to display" label is shown       |
 | 12 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
 | 13 | Input JS script (ex.: `<script>alert("I hacked this!")</script>`) | Country list is hidden and "Nothing to display" label is shown       |
 | 14 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
@@ -158,14 +158,14 @@ Playwright + JS
 
 ### 8 - Check max length of input text
 
-| № | Steps                                                                                            | Expected result                                                      |
-|---|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| 1 | Visit https://appmagic.rocks/top-charts/apps                                                     | The corresponding page is opened                                     |
-| 2 | Click on Geography selector                                                                      | The Geography selector modal window is opened                        |
-| 3 | Input 254 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5 - last symbol`) | Input text length is 254                                             |
-| 4 | Clear the input field                                                                            | The input field is cleared and all countries are showing in the list |
-| 5 | Input 255 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5`)               | Input text length is 255                                             |
-| 6 | Clear the input field                                                                            | The input field is cleared and all countries are showing in the list |
-| 7 | Input 256 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5 + any symbol`)  | Input text length is 255                                             |
+| № | Steps                                                                                                   | Expected result                                                      |
+|---|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| 1 | Visit https://appmagic.rocks/top-charts/apps                                                            | The corresponding page is opened                                     |
+| 2 | Click on Geography selector                                                                             | The Geography selector modal window is opened                        |
+| 3 | Input 254 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!".repeat(5) - last symbol`)  | Input text length is 254                                             |
+| 4 | Clear the input field                                                                                   | The input field is cleared and all countries are showing in the list |
+| 5 | Input 255 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!".repeat(5)`)                | Input text length is 255                                             |
+| 6 | Clear the input field                                                                                   | The input field is cleared and all countries are showing in the list |
+| 7 | Input 256 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!".repeat(5) + extra symbol`) | Input text length is 255                                             |
 
 
