@@ -1,8 +1,7 @@
 {
   "name": "app-magic-aqa-test-assignment",
   "version": "1.0.0",
-  "description": "Playwrite test for country selector",
-  "main": "index.js",
+  "description": "Playwright tests for country selector",
   "scripts": {
     "test": "npx playwright test",
     "test:ui": "npm run test -- --ui",
