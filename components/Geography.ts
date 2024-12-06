@@ -35,8 +35,8 @@ export class Geography {
     await this.geographyInput.click();
   }
 
-  async typeCountryName(countryName: string) {
-    await this.selectorInput.fill(countryName);
+  async fillSearchInput(text: string) {
+    await this.selectorInput.fill(text);
   }
 
   async clearInputTextWithKeyboard() {

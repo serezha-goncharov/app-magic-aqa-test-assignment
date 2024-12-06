@@ -23,7 +23,7 @@ test.describe('Geography selector', () => {
     ];
 
     for (const testCase of testCases) {
-      await appsPage.geography.typeCountryName(testCase);
+      await appsPage.geography.fillSearchInput(testCase);
       await appsPage.geography.checkDisplayedCountry();
       await appsPage.geography.clearInputTextWithKeyboard();
     }
