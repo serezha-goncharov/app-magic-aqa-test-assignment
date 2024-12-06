@@ -16,7 +16,7 @@ export class Geography {
 
   clearSearchButton: Locator = this.selectorPanel.locator('.g-clear-search-icon');
   noDataLabel: Locator = this.selectorPanel.getByText('Nothing to display');
-  
+
   async getCountryList() {
     const countryNames: string[] = await this.countryPanel.locator('span').allInnerTexts();
     return countryNames.filter(countryName => !countryName.includes('\n'));
@@ -75,5 +75,9 @@ export class Geography {
 
   async checkSelectorInputLength(length: number) {
     expect.soft(await this.selectorInput.inputValue()).toHaveLength(length);
+  }
+
+  async checkSelectorPanelScreenshot() {
+    await expect(this.selectorPanel).toHaveScreenshot({maxDiffPixels: 20});
   }
 }

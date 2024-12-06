@@ -27,7 +27,6 @@ test('Check search field', async ({appsPage}) => {
   }
 });
 
-
 test('Check clicking on country', async ({appsPage}) => {
   await appsPage.geography.clickOnGeographyInput();
   await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
@@ -38,7 +37,6 @@ test('Check clicking on country', async ({appsPage}) => {
   await appsPage.geography.checkIsHidden(appsPage.geography.selectorPanel);
   await appsPage.geography.checkCountryNameIsShownInGeographyInput(countryName);
 });
-
 
 test('Check clear input button', async ({appsPage}) => {
   await appsPage.geography.clickOnGeographyInput();
@@ -53,14 +51,14 @@ test('Check clear input button', async ({appsPage}) => {
 
 });
 
-test('Check no-data label', async ({appsPage}, workerInfo) => {
+test('Check no-data label', async ({appsPage}) => {
   await appsPage.geography.clickOnGeographyInput();
   await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
   await appsPage.geography.fillSearchInput("Zimbabwe");
   await appsPage.geography.checkIsVisible(appsPage.geography.noDataLabel);
   await appsPage.geography.checkIsHidden(appsPage.geography.countryPanel);
-  await appsPage.geography.selectorPanel.screenshot({path: `screenshots/${workerInfo.project.name}_panel.png`});
+  await appsPage.geography.checkSelectorPanelScreenshot();
 });
 
 test('Check invalid input data', async ({appsPage}) => {
