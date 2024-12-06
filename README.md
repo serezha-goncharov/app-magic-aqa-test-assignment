@@ -26,6 +26,12 @@ run tests in debug mode
 npm run test:debug
 ```
 
+run last failed tests
+
+```npm
+npm run test:last:failed
+```
+
 show `html` report
 
 ```npm
