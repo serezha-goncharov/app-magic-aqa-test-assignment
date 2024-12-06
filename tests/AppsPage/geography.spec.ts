@@ -62,6 +62,7 @@ test.describe('Geography selector', () => {
     await appsPage.geography.fillSearchInput("Zimbabwe");
     await appsPage.geography.checkIsVisible(appsPage.geography.noDataLabel);
     await appsPage.geography.checkIsHidden(appsPage.geography.countryPanel);
+    await appsPage.geography.selectorPanel.screenshot({path: `screenshots/${workerInfo.project.name}_panel.png`});
   });
 
   test('Check invalid input data', async ({appsPage}) => {
