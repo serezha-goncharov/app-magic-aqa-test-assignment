@@ -113,6 +113,8 @@ Playwright + JS
 
 ### 5 - Check geography selector is showing "Nothing to display" label
 
+> snapshot is taken after last step and visual assertion is performed
+
 | № | Steps                                        | Expected result                                                |
 |---|----------------------------------------------|----------------------------------------------------------------|
 | 1 | Visit https://appmagic.rocks/top-charts/apps | The corresponding page is opened                               |
