@@ -37,7 +37,7 @@ test.describe('Geography selector', () => {
     const countryName = await appsPage.geography.getRandomCountry();
 
     await appsPage.geography.clickOnCountryName(countryName);
-    await appsPage.geography.checkSelectorPanelIsHidden();
+    await appsPage.geography.checkIsHidden(appsPage.geography.selectorPanel);
     await appsPage.geography.checkCountryNameIsShownInGeographyInput(countryName);
   });
 
