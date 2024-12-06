@@ -88,6 +88,8 @@ Playwright + JS
 | 13 | Input any country name with whitespace in the start and end (ex.: " Algeria ") | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
 | 14 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
 
+---
+
 ### 3 - Check clicking on country
 
 | № | Steps                                            | Expected result                                                            |
