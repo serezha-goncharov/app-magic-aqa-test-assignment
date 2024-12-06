@@ -60,8 +60,6 @@ test.describe('Geography selector', () => {
     await appsPage.geography.selectorPanel.isVisible();
 
     await appsPage.geography.fillSearchInput("Zimbabwe");
-    await appsPage.geography.countryPanel.isHidden();
-    await appsPage.geography.noDataLabel.isVisible();
     await appsPage.geography.checkIsVisible(appsPage.geography.noDataLabel);
     await appsPage.geography.checkIsHidden(appsPage.geography.countryPanel);
   });
