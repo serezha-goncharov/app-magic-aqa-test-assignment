@@ -9,4 +9,8 @@ export class Geography {
     this.geographyElement = page.locator('country-single-select');
   }
 
+  async checkVisibility() {
+    await this.geographyElement.isVisible();
+  }
+
 }
