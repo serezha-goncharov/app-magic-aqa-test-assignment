@@ -41,5 +41,18 @@ test.describe('Geography selector', () => {
     await appsPage.geography.checkCountryNameIsShownInGeographyInput(countryName);
   });
 
+
+  test('Check clear input button', async ({appsPage}) => {
+    await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.selectorPanel.isVisible();
+
+    const countryName = await appsPage.geography.getRandomCountry();
+
+    await appsPage.geography.fillSearchInput(countryName);
+    await appsPage.geography.clearInputByButton();
+    await appsPage.geography.checkSelectorInputIsCleared();
+    await appsPage.geography.countryPanel.isVisible();
+  });
+
 });
 
