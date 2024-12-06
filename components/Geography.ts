@@ -68,4 +68,8 @@ export class Geography {
   async checkCountryNameIsShownInGeographyInput(countryName: string) {
     await expect(this.geographyInput.locator('span > span')).toHaveText(countryName);
   }
+
+  async checkSelectorInputIsCleared() {
+    await expect(this.selectorInput).toBeEmpty();
+  }
 }
