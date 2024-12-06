@@ -6,6 +6,7 @@
     "test": "npx playwright test --update-snapshots",
     "test:ui": "npm run test -- --ui",
     "test:debug": "npm run test -- --debug",
+    "test:last:failed": "npm run test -- --last-failed",
     "report": "npx playwright show-report"
   },
   "keywords": [],
