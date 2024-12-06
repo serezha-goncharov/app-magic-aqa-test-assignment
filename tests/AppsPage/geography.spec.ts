@@ -4,12 +4,13 @@ import {test} from '@fixtures/base';
 test.describe('Geography selector', () => {
 
   test('Is visible', async ({appsPage}) => {
-    await appsPage.geography.geographyElement.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.geographyElement);
   });
 
   test('Check search inside selector', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
-    await appsPage.geography.selectorPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
+
 
     const countryName = await appsPage.geography.getRandomCountry();
 
@@ -32,7 +33,8 @@ test.describe('Geography selector', () => {
 
   test('Check clicking on country', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
-    await appsPage.geography.selectorPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
+
 
     const countryName = await appsPage.geography.getRandomCountry();
 
@@ -44,14 +46,16 @@ test.describe('Geography selector', () => {
 
   test('Check clear input button', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
-    await appsPage.geography.selectorPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
+
 
     const countryName = await appsPage.geography.getRandomCountry();
 
     await appsPage.geography.fillSearchInput(countryName);
     await appsPage.geography.clearInputByButton();
     await appsPage.geography.checkSelectorInputIsCleared();
-    await appsPage.geography.countryPanel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.countryPanel);
+
   });
 
   test('Check "Nothing to display" label', async ({appsPage}) => {
@@ -61,6 +65,9 @@ test.describe('Geography selector', () => {
     await appsPage.geography.fillSearchInput("Zimbabwe");
     await appsPage.geography.countryPanel.isHidden();
     await appsPage.geography.noDataLabel.isVisible();
+    await appsPage.geography.checkIsVisible(appsPage.geography.noDataLabel);
+    await appsPage.geography.checkIsHidden(appsPage.geography.countryPanel);
+  });
 
   });
 

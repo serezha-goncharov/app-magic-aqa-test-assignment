@@ -57,6 +57,14 @@ export class Geography {
 
 
   // Assertions
+  async checkIsVisible(locator: Locator) {
+    await expect(locator).toBeVisible();
+  }
+
+  async checkIsHidden(locator: Locator) {
+    await expect(locator).toBeHidden();
+  }
+
   async checkDisplayedCountry() {
     await expect(this.countryPanel.locator('button')).toHaveCount(1);
     await expect(this.countryPanel.locator('button > span > span')).toHaveText(this.randomCountry);
