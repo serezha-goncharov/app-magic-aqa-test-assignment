@@ -4,11 +4,12 @@ import {test} from '@fixtures/base';
 test.describe('Geography selector', () => {
 
   test('Is visible', async ({appsPage}) => {
-    await appsPage.geography.checkVisibility();
+    await appsPage.geography.geographyElement.isVisible();
   });
 
   test('Check search inside selector', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.selectorPanel.isVisible();
 
     const countryName = await appsPage.geography.getRandomCountry();
 
@@ -31,6 +32,7 @@ test.describe('Geography selector', () => {
 
   test('Check clicking on country', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.selectorPanel.isVisible();
 
     const countryName = await appsPage.geography.getRandomCountry();
 
