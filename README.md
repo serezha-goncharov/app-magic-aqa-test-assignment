@@ -1,2 +1,3 @@
 # app-magic-aqa-test-assignment
-Playwrite test for country selector
+
+Playwright test for country selector
