@@ -3,7 +3,7 @@ import {test} from '@fixtures/base';
 
 test.describe('Geography selector', () => {
 
-  test('Is visible', async ({appsPage}) => {
+  test('Check visibility', async ({appsPage}) => {
     await appsPage.geography.checkIsVisible(appsPage.geography.geographyElement);
   });
 
