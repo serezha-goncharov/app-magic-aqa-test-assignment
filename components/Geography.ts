@@ -72,4 +72,8 @@ export class Geography {
   async checkSelectorInputIsCleared() {
     await expect(this.selectorInput).toBeEmpty();
   }
+
+  async checkSelectorInputLength(length: number) {
+    expect.soft(await this.selectorInput.inputValue()).toHaveLength(length);
+  }
 }
