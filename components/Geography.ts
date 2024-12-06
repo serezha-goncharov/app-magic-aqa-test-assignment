@@ -58,4 +58,12 @@ export class Geography {
     await expect(this.countryPanel.locator('button')).toHaveCount(1);
     await expect(this.countryPanel.locator('button > span > span')).toHaveText(this.randomCountry);
   }
+
+  async checkSelectorPanelIsHidden() {
+    await expect(this.countryPanel).toBeHidden();
+  }
+
+  async checkCountryNameIsShownInGeographyInput(countryName: string) {
+    await expect(this.geographyInput.locator('span > span')).toHaveText(countryName);
+  }
 }
