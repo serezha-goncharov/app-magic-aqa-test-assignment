@@ -37,13 +37,14 @@ npm run test:report
 Test assignment for QA
 AppMagic - [link](https://docs.google.com/document/d/1DiJR6vnf8JyRHaB3pJ56YViKa6Uf4xF_Ze3ip3Ps0nA/edit?tab=t.0)
 
-Provided tests do not cover fully functionality, such as:
+### Limitations
 
-- checking API layer (requests and responses for selecting specific country)
-- checking page content updated after selecting specific country
-
-Also, tests are not set up for CI, in matter of time-consuming. And project devices were taken from default Playwright
-config
+1. Provided tests do not cover fully functionality, such as:
+	- checking API layer (requests and responses for selecting specific country)
+	- checking page content updated after selecting specific country
+2. Tests are not set up for CI, in matter of time-consuming.
+3. Project devices were taken from default Playwright config
+4. Repo branching was not applied, due to time saving.
 
 ---
 
