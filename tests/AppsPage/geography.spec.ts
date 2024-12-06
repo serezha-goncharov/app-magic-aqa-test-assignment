@@ -118,5 +118,19 @@ test.describe('Geography selector', () => {
     }
   });
 
+  test('Check closing the selector', async ({appsPage}) => {
+    const testCases = [
+      {action: async () => await appsPage.page.keyboard.press('Escape')},
+      {action: async () => await appsPage.page.keyboard.press('Enter')},
+      {action: async () => await appsPage.page.locator('body').click()},
+    ];
+    for (const testCase of testCases) {
+      await appsPage.geography.clickOnGeographyInput();
+      await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
+      await testCase.action();
+      await appsPage.geography.checkIsHidden(appsPage.geography.selectorPanel);
+    }
+  });
+
 });
 
