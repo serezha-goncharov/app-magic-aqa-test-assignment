@@ -44,6 +44,10 @@ export class Geography {
     await this.page.keyboard.press("Backspace");
   }
 
+  async clickOnCountryName(countryName: string) {
+    await this.countryPanel.locator('button').getByText(countryName).click();
+  }
+
 
   // Assertions
   async checkVisibility() {
