@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Playwright tests for country selector",
   "scripts": {
-    "test": "npx playwright test",
+    "test": "npx playwright test --update-snapshots",
     "test:ui": "npm run test -- --ui",
     "test:debug": "npm run test -- --debug",
     "report": "npx playwright show-report"
