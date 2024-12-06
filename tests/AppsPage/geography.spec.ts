@@ -28,5 +28,16 @@ test.describe('Geography selector', () => {
     }
   });
 
+
+  test('Check clicking on country', async ({appsPage}) => {
+    await appsPage.geography.clickOnGeographyInput();
+
+    const countryName = await appsPage.geography.getRandomCountry();
+
+    await appsPage.geography.clickOnCountryName(countryName);
+    await appsPage.geography.checkSelectorPanelIsHidden();
+    await appsPage.geography.checkCountryNameIsShownInGeographyInput(countryName);
+  });
+
 });
 
