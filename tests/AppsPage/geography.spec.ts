@@ -99,7 +99,7 @@ test('Check invalid input data', async ({appsPage}) => {
       visibleElement: appsPage.geography.countryPanel,
     },
     {
-      value: 'Беларусь',
+      value: 'Россия',
       hiddenElement: appsPage.geography.countryPanel,
       visibleElement: appsPage.geography.noDataLabel,
     },
