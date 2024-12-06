@@ -16,20 +16,15 @@ export class Geography {
 
   clearSearchButton: Locator = this.selectorPanel.locator('.g-clear-search-icon');
   noDataLabel: Locator = this.selectorPanel.getByText('Nothing to display');
-
-  countryList: string[] = [];
-  randomCountry: string;
-
+  
   async getCountryList() {
     const countryNames: string[] = await this.countryPanel.locator('span').allInnerTexts();
-    this.countryList = countryNames.filter(countryName => !countryName.includes('\n'));
-    return this.countryList;
+    return countryNames.filter(countryName => !countryName.includes('\n'));
   }
 
   async getRandomCountry() {
-    const countryList = !!this.countryList.length ? this.countryList : await this.getCountryList();
-    this.randomCountry = getRandomElement(countryList);
-    return this.randomCountry;
+    const countryList = await this.getCountryList();
+    return getRandomElement(countryList);
   }
 
 
