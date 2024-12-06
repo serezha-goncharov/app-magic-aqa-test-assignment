@@ -54,5 +54,15 @@ test.describe('Geography selector', () => {
     await appsPage.geography.countryPanel.isVisible();
   });
 
+  test('Check "Nothing to display" label', async ({appsPage}) => {
+    await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.selectorPanel.isVisible();
+
+    await appsPage.geography.fillSearchInput("Zimbabwe");
+    await appsPage.geography.countryPanel.isHidden();
+    await appsPage.geography.noDataLabel.isVisible();
+
+  });
+
 });
 
