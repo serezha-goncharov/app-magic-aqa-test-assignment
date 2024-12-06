@@ -11,7 +11,6 @@ test.describe('Geography selector', () => {
     await appsPage.geography.clickOnGeographyInput();
     await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
-
     const countryName = await appsPage.geography.getRandomCountry();
 
     const testCases = [
@@ -35,7 +34,6 @@ test.describe('Geography selector', () => {
     await appsPage.geography.clickOnGeographyInput();
     await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
-
     const countryName = await appsPage.geography.getRandomCountry();
 
     await appsPage.geography.clickOnCountryName(countryName);
@@ -47,7 +45,6 @@ test.describe('Geography selector', () => {
   test('Check clear input button', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
     await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
-
 
     const countryName = await appsPage.geography.getRandomCountry();
 
@@ -69,6 +66,58 @@ test.describe('Geography selector', () => {
     await appsPage.geography.checkIsHidden(appsPage.geography.countryPanel);
   });
 
+  test('Check invalid input data', async ({appsPage}) => {
+    await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.selectorPanel.isVisible();
+
+    const testCases: Array<any> = [
+      {
+        value: '0',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: '123',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: '-123',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: '1234765738904567859134857198375',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: '!@#$%^&*()_-+=*;"\'<>?\\:|}{[]~`§±/',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: ' ',
+        hiddenElement: appsPage.geography.noDataLabel,
+        visibleElement: appsPage.geography.countryPanel,
+      },
+      {
+        value: 'Беларусь',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+      {
+        value: '<script>alert("I hacked this!")</script>',
+        hiddenElement: appsPage.geography.countryPanel,
+        visibleElement: appsPage.geography.noDataLabel,
+      },
+    ];
+
+    for (const testCase of testCases) {
+      await appsPage.geography.fillSearchInput(testCase.value);
+      await appsPage.geography.checkIsVisible(testCase.visibleElement);
+      await appsPage.geography.checkIsHidden(testCase.hiddenElement);
+    }
   });
 
 });
