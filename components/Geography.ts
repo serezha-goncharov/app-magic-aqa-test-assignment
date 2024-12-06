@@ -15,6 +15,7 @@ export class Geography {
       .filter({has: this.page.getByText('Countries')});
 
   clearSearchButton: Locator = this.selectorPanel.locator('.g-clear-search-icon');
+  noDataLabel: Locator = this.selectorPanel.getByText('Nothing to display');
 
   countryList: string[] = [];
   randomCountry: string;
