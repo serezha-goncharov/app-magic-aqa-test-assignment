@@ -71,22 +71,22 @@ Playwright + JS
 
 ### 2 - Check geography search inside selector
 
-| №  | Steps                                                                          | Expected result                                                                             |
-|----|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| 1  | Visit https://appmagic.rocks/top-charts/apps                                   | The corresponding page is opened                                                            |
-| 2  | Click on Geography selector                                                    | The Geography selector modal window is opened                                               |
-| 3  | Input any country name in Capitalcase (ex.: `Algeria`)                         | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 4  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 5  | Input any country name in lowercase (ex.: `algeria`)                           | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 6  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 7  | Input any country name in UPPERCASE (ex.: `ALGERIA`)                           | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 8  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 9  | Input any country name with whitespace in the start (ex.: ` Algeria`)          | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 10 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 11 | Input any country name with whitespace in the end (ex.: `Algeria `)            | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 12 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 13 | Input any country name with whitespace in the start and end (ex.: ` Algeria `) | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
-| 14 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
+| №  | Steps                                                                            | Expected result                                                                             |
+|----|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| 1  | Visit https://appmagic.rocks/top-charts/apps                                     | The corresponding page is opened                                                            |
+| 2  | Click on Geography selector                                                      | The Geography selector modal window is opened                                               |
+| 3  | Input any country name in Capitalcase (ex.: `Algeria`)                           | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 4  | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
+| 5  | Input any country name in lowercase (ex.: `algeria`)                             | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 6  | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
+| 7  | Input any country name in UPPERCASE (ex.: `ALGERIA`)                             | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 8  | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
+| 9  | Input any country name with whitespace in the start (ex.: `" Algeria"`)          | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 10 | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
+| 11 | Input any country name with whitespace in the end (ex.: `"Algeria "`)            | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 12 | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
+| 13 | Input any country name with whitespace in the start and end (ex.: `" Algeria "`) | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
+| 14 | Clear the input field                                                            | The input field is cleared and all countries are showing in the list                        |
 
 ---
 
