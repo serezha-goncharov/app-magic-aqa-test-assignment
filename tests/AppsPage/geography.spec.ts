@@ -133,5 +133,33 @@ test.describe('Geography selector', () => {
     }
   });
 
+  test('Check max length of input field', async ({appsPage}) => {
+    await appsPage.geography.clickOnGeographyInput();
+    await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
+    const maxLengthText: string = 'AppMagic is the best analysis tool for mobile apps!'.repeat(5);
+    const maxLength: number = Number(await appsPage.geography.selectorInput.getAttribute('maxlength'));
+
+
+    const testCases = [
+      {
+        text: maxLengthText.slice(0, -1), // text length is 254 chars
+        maxLength: maxLength - 1 // max length is 254 chars
+      },
+      {
+        text: maxLengthText, // text length is 255 chars
+        maxLength: maxLength // max length is 255 chars
+      },
+      {
+        text: maxLengthText.concat('!'), // text length is 256 chars
+        maxLength: maxLength // max length is 255 chars
+      }
+    ];
+
+    for (const testCase of testCases) {
+      await appsPage.geography.fillSearchInput(testCase.text);
+      await appsPage.geography.checkSelectorInputLength(testCase.maxLength);
+    }
+  });
+
 });
 
