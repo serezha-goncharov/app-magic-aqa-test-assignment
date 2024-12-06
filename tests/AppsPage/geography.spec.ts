@@ -3,11 +3,11 @@ import {test} from '@fixtures/base';
 
 test.describe('Geography selector', () => {
 
-  test('Check visibility', async ({appsPage}) => {
+  test('Check geography selector visibility', async ({appsPage}) => {
     await appsPage.geography.checkIsVisible(appsPage.geography.geographyElement);
   });
 
-  test('Check search inside selector', async ({appsPage}) => {
+  test('Check search field', async ({appsPage}) => {
     await appsPage.geography.clickOnGeographyInput();
     await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
@@ -55,7 +55,7 @@ test.describe('Geography selector', () => {
 
   });
 
-  test('Check "Nothing to display" label', async ({appsPage}) => {
+  test('Check no-data label', async ({appsPage}, workerInfo) => {
     await appsPage.geography.clickOnGeographyInput();
     await appsPage.geography.checkIsVisible(appsPage.geography.selectorPanel);
 
