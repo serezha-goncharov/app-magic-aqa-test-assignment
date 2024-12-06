@@ -25,7 +25,7 @@ export class Geography {
 
   async getRandomCountry() {
     const countryList = !!this.countryList.length ? this.countryList : await this.getCountryList();
-    this.randomCountry = await getRandomElement(countryList);
+    this.randomCountry = getRandomElement(countryList);
     return this.randomCountry;
   }
 
