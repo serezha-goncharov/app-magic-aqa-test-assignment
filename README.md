@@ -75,17 +75,17 @@ Playwright + JS
 |----|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | 1  | Visit https://appmagic.rocks/top-charts/apps                                   | The corresponding page is opened                                                            |
 | 2  | Click on Geography selector                                                    | The Geography selector modal window is opened                                               |
-| 3  | Input any country name in Capitalcase (ex.: "Algeria")                         | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 3  | Input any country name in Capitalcase (ex.: `Algeria`)                         | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 4  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 5  | Input any country name in lowercase (ex.: "algeria")                           | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 5  | Input any country name in lowercase (ex.: `algeria`)                           | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 6  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 7  | Input any country name in UPPERCASE (ex.: "ALGERIA")                           | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 7  | Input any country name in UPPERCASE (ex.: `ALGERIA`)                           | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 8  | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 9  | Input any country name with whitespace in the start (ex.: " Algeria")          | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 9  | Input any country name with whitespace in the start (ex.: ` Algeria`)          | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 10 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 11 | Input any country name with whitespace in the end (ex.: "Algeria ")            | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 11 | Input any country name with whitespace in the end (ex.: `Algeria `)            | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 12 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
-| 13 | Input any country name with whitespace in the start and end (ex.: " Algeria ") | The country list is filtered and only the corresponding country is visible (ex.: "Algeria") |
+| 13 | Input any country name with whitespace in the start and end (ex.: ` Algeria `) | The country list is filtered and only the corresponding country is visible (ex.: `Algeria`) |
 | 14 | Clear the input field                                                          | The input field is cleared and all countries are showing in the list                        |
 
 ---
@@ -106,7 +106,7 @@ Playwright + JS
 |---|----------------------------------------------|--------------------------------------------------------------------------|
 | 1 | Visit https://appmagic.rocks/top-charts/apps | The corresponding page is opened                                         |
 | 2 | Click on Geography selector                  | The Geography selector modal window is opened                            |
-| 3 | Input any text (ex.: "test")                 | Text is shown in input field                                             |
+| 3 | Input any text (ex.: any country name)       | Text is shown in input field                                             |
 | 4 | Click on clear button                        | The input field is cleared and country list is back to its default state |
 
 ---
@@ -117,7 +117,7 @@ Playwright + JS
 |---|----------------------------------------------|----------------------------------------------------------------|
 | 1 | Visit https://appmagic.rocks/top-charts/apps | The corresponding page is opened                               |
 | 2 | Click on Geography selector                  | The Geography selector modal window is opened                  |
-| 3 | Input out of list country (ex.: "Zimbabwe")  | Country list is hidden and "Nothing to display" label is shown |
+| 3 | Input out of list country (ex.: `Zimbabwe`)  | Country list is hidden and "Nothing to display" label is shown |
 
 ---
 
@@ -127,17 +127,17 @@ Playwright + JS
 |----|-------------------------------------------------------------------|----------------------------------------------------------------------|
 | 1  | Visit https://appmagic.rocks/top-charts/apps                      | The corresponding page is opened                                     |
 | 2  | Click on Geography selector                                       | The Geography selector modal window is opened                        |
-| 3  | Input numbers (ex.: 123)                                          | Country list is hidden and "Nothing to display" label is shown       |
+| 3  | Input numbers (ex.: `123`)                                        | Country list is hidden and "Nothing to display" label is shown       |
 | 4  | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 5  | Input big numbers (ex.: 1234765738904567859134857198375)          | Country list is hidden and "Nothing to display" label is shown       |
+| 5  | Input big numbers (ex.: `1234765738904567859134857198375`)        | Country list is hidden and "Nothing to display" label is shown       |
 | 6  | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 7  | Input special characters (ex.: "!@#$%^&*()<>?:" }{[]~`§±/)        | Country list is hidden and "Nothing to display" label is shown       |
+| 7  | Input special characters (ex.: `"!@#$%^&*()<>?:" }{[]~\§±/)`      | Country list is hidden and "Nothing to display" label is shown       |
 | 8  | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 9  | Input space                                                       | Country list is not changed and clear button is shown                |
+| 9  | Input space `" "`                                                 | Country list is not changed and clear button is shown                |
 | 10 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 11 | Input Cyrillic symbols                                            | Country list is hidden and "Nothing to display" label is shown       |
+| 11 | Input Cyrillic symbols (ex.: `Беларусь`)                          | Country list is hidden and "Nothing to display" label is shown       |
 | 12 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
-| 13 | Input JS script (ex.: "<script>alert("I hacked this!")</script>") | Country list is hidden and "Nothing to display" label is shown       |
+| 13 | Input JS script (ex.: `<script>alert("I hacked this!")</script>`) | Country list is hidden and "Nothing to display" label is shown       |
 | 14 | Clear the input field                                             | The input field is cleared and all countries are showing in the list |
 
 ---
@@ -150,22 +150,22 @@ Playwright + JS
 | 2 | Click on Geography selector                  | The Geography selector modal window is opened |
 | 3 | Click outside the selector                   | The selector is closed                        |
 | 4 | Click on Geography selector                  | The Geography selector modal window is opened |
-| 5 | Press Esc button                             | The selector is closed                        |
+| 5 | Press `Esc` button                           | The selector is closed                        |
 | 6 | Click on Geography selector                  | The Geography selector modal window is opened |
-| 7 | Press Enter button                           | The selector is closed                        |
+| 7 | Press `Enter` button                         | The selector is closed                        |
 
 ---
 
 ### 8 - Check max length of input text
 
-| № | Steps                                                                                          | Expected result                                                      |
-|---|------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| 1 | Visit https://appmagic.rocks/top-charts/apps                                                   | The corresponding page is opened                                     |
-| 2 | Click on Geography selector                                                                    | The Geography selector modal window is opened                        |
-| 3 | Input 254 chars (ex.: "AppMagic is the best analysis tool for mobile apps!" * 5 - last symbol) | Input text length is 254                                             |
-| 4 | Clear the input field                                                                          | The input field is cleared and all countries are showing in the list |
-| 5 | Input 255 chars (ex.: "AppMagic is the best analysis tool for mobile apps!" * 5)               | Input text length is 255                                             |
-| 6 | Clear the input field                                                                          | The input field is cleared and all countries are showing in the list |
-| 7 | Input 256 chars (ex.: "AppMagic is the best analysis tool for mobile apps!" * 5 + any symbol)  | Input text length is 255                                             |
+| № | Steps                                                                                            | Expected result                                                      |
+|---|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| 1 | Visit https://appmagic.rocks/top-charts/apps                                                     | The corresponding page is opened                                     |
+| 2 | Click on Geography selector                                                                      | The Geography selector modal window is opened                        |
+| 3 | Input 254 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5 - last symbol`) | Input text length is 254                                             |
+| 4 | Clear the input field                                                                            | The input field is cleared and all countries are showing in the list |
+| 5 | Input 255 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5`)               | Input text length is 255                                             |
+| 6 | Clear the input field                                                                            | The input field is cleared and all countries are showing in the list |
+| 7 | Input 256 chars (ex.: `"AppMagic is the best analysis tool for mobile apps!" * 5 + any symbol`)  | Input text length is 255                                             |
 
 
