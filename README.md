@@ -41,7 +41,7 @@ npm run report
 ## Description
 
 Test assignment for QA
-AppMagic - [link](https://docs.google.com/document/d/1DiJR6vnf8JyRHaB3pJ56YViKa6Uf4xF_Ze3ip3Ps0nA/edit?tab=t.0)
+AppMagic - [link](https://docs.google.com/document/d/1C72yAI3RewvfKRQse1EywqET1VMrDmzOMiY_S2TKdqE/edit?tab=t.0)
 
 ### Limitations
 
